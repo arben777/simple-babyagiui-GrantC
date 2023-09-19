@@ -259,7 +259,8 @@ def main():
         st.title(f"🧙🔮🤖 Elysium Task Wizard ✨🪄 made for {DEFAULT_INVESTOR}, Master of 10X")
         st.markdown(
             """
-                > Powered by: 🌟🫶🤵🏽‍♂️ [Elysium Innovations](https://www.storydoc.com/2b6bb4f0d5017381b013e06bbe686991/e5734913-b29e-4de7-ba9f-dc7821b1eeb0/64f9b6d6f6664f000bfd26cc) 
+                > Powered by: 🌟🫶🤵🏽‍♂️ [Elysium Innovations](https://www.storydoc.com/2b6bb4f0d5017381b013e06bbe686991/e5734913-b29e-4de7-ba9f-dc7821b1eeb0/64f9b6d6f6664f000bfd26cc)
+                > _Be Advised: 🚨This AI Agent model **is not** utilizing Internet access in this simplified demonstration._
             """
         )
 
