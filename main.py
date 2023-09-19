@@ -256,7 +256,7 @@ def main():
     try:
         openai_api_key = os.getenv("OPENAI_API_KEY")
 
-        st.title(f"🧙🔮🤖 Elysium Task Wizard ✨🪄 made for {DEFAULT_INVESTOR}")
+        st.title(f"🧙🔮🤖 Elysium Task Wizard ✨🪄 made for {DEFAULT_INVESTOR}, Master of 10X")
         st.markdown(
             """
                 > Powered by: 🌟🫶🤵🏽‍♂️ [Elysium Innovations](https://www.storydoc.com/2b6bb4f0d5017381b013e06bbe686991/e5734913-b29e-4de7-ba9f-dc7821b1eeb0/64f9b6d6f6664f000bfd26cc) 
@@ -269,7 +269,7 @@ def main():
 
             investor_prompts = investor_specific_prompts.get(DEFAULT_INVESTOR, {"objectives": [], "tasks": []})
 
-            st.markdown("## 🏁 What's your Objective:")
+            st.markdown("## 🏁 What's an Objective you want Elysium to 10X:")
             OBJECTIVE = st.text_input(
                 "Alternative Example:\n" + "\n".join(f"• {objective}" for objective in investor_prompts['objectives']),
                 value="Host 10x Growth Conference in three new continents.",
@@ -287,7 +287,7 @@ def main():
 
             vectorstore = initial_embeddings(openai_api_key, first_task)
 
-            if st.button(" 🪄 Let me perform the magic 👼🏼"):
+            if st.button(" 🪄 Let me perform that 10x magic 👼🏼"):
                 baby_agi = BabyAGI.from_llm_and_objectives(
                     llm=OpenAI(openai_api_key=openai_api_key),
                     vectorstore=vectorstore,
@@ -295,7 +295,7 @@ def main():
                     first_task=first_task,
                     verbose=False,
                 )
-                with st.spinner("👶 BabyAGI 🤖 at work ..."):
+                with st.spinner("👶 Elysium Wizard 🤖 at work ..."):
                     baby_agi.run(max_iterations=max_iterations)
 
                 st.balloons()
